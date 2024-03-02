@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
+import 'sign_up.dart';
 
-void main() {
-  runApp(MyApp());
-}
 
 class MyApp extends StatelessWidget {
   @override
@@ -107,8 +105,12 @@ class OnboardingScreen extends StatelessWidget {
                   width: 340.0,
                   height: 55.0,
                   child: ElevatedButton(
-                    onPressed: () {
-                      // Handle signup button press
+                   onPressed: () {
+                      // Navigasi ke halaman sign_up_page
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignUpPage()),
+                      );
                     },
                    style: ElevatedButton.styleFrom(
                     primary: const Color.fromARGB(255, 255, 255, 255),
@@ -137,4 +139,12 @@ class OnboardingScreen extends StatelessWidget {
       ),
     );
   }
+}
+void main() {
+  runApp(MaterialApp(
+    home: OnboardingScreen(),
+    routes: {
+      '/login': (context) => LoginPage(),
+    },
+  ));
 }

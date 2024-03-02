@@ -8,7 +8,7 @@ void main() {
   runApp(MaterialApp(
     initialRoute: '/',
     routes: {
-      '/': (context) => OnboardingScreen(),
+      '/': (context) => OnboardingPage(),
       '/login_page' :(context) => LoginPage(),
       '/sign_up': (context) => SignUpPage(),
       '/successful':(context) => SuccessfulPage(),
